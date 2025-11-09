@@ -1,0 +1,58 @@
+### el.foma (Modern Greek) ###
+### Adriana R. Flórez      ###
+## -------------------------##
+
+## Vowels, consonants and syllables
+define V [α | ε | η | ι | ο | υ | ω | ά | έ | ή | ί | ό | ύ | ώ ] ;
+define C [β | γ | δ | ζ | θ | κ | λ | μ | ν | ξ | π | ρ | σ | τ | φ | χ | ψ];
+define S [C (C) V (V) (V) (V)];
+
+## Lexicon
+read lexc el.lexc
+define Lexicon;
+
+## Nouns and adjectives
+## Base form: always masc, singular, nominative
+## --------------------
+define DeleteSufO ο -> 0 || _ "^" ; # Nouns
+define DeleteSufMa μ α -> 0 || _ "^" ;
+define DeleteSufA α -> 0 || _ "^" ;
+define DeleteSufI η -> 0 || _ "^" ;
+define DeleteSufI2 ι -> 0 || _ "^" ;
+define DeleteSufOs ο ς -> 0 || _ "^" ; # Adjs
+define DeleteSufOsTonos ό ς -> 0 || _ "^" ;
+define DeleteSufAs α ς -> 0 || _ "^" ;
+define DeleteSufIs ή ς -> 0 || _ "^" ;
+define DeleteSufUs ύ ς -> 0 || _ "^" ;
+
+## Phonological rules
+# Passive verbs
+define PhonoXPassive θ -> τ || χ "^" _;
+define PhonoZPassive ζ -> 0 || _ "^" σ ;
+define PhonoGPassive γ -> χ || _ "^" θ ;
+# Active verbs
+define PhonoVActive  ν -> σ ||  _ "^" "^" ;
+define PhonoZActive [ζ | τ | δ | θ | σ] -> σ || _ "^" "^" ;
+define PhonoPsActive [π | β | φ | π τ | φ τ | α υ | ε υ] -> ψ || _ "^" "^" ;
+define PhonoKActive [κ | γ | χ | χ ν] -> ξ || _ "^" "^" ;
+define PhonoSActive [σ σ | ξ σ] -> ξ || _ "^" "^" ;
+define CleanS σ -> 0 || [σ | ψ | ξ] _ "^" "^" ;
+
+# Aorist increment
+# define AoristEpsilon [..] -> έ || .#. _ ?* "!" ?* (check it is only 2 syllables?); 
+
+# Clean up
+define Cleanup "^" -> 0;
+
+## Combine grammar
+define Grammar Lexicon .o. 
+DeleteSufO .o. DeleteSufMa .o. DeleteSufA .o. DeleteSufI .o. DeleteSufI2 .o.
+DeleteSufOs .o. DeleteSufOsTonos .o. 
+DeleteSufAs .o.
+DeleteSufIs .o.
+DeleteSufUs .o.
+PhonoXPassive .o. PhonoGPassive .o. PhonoZPassive .o.
+PhonoVActive .o. PhonoZActive .o. PhonoPsActive .o.PhonoKActive .o. PhonoSActive .o. 
+Cleanup;
+
+regex Grammar;

@@ -1,0 +1,47 @@
+ανθρωπος	άνθρωπος+Ν+Sg+Nom
+
+αντρων	άντρας+N+Plur+Gen
+
+αφεντες	αφέντης+N+Plur+Voc
+αφεντες	αφέντης+N+Plur+Acc
+αφεντες	αφέντης+N+Plur+Nom
+
+ιδρυματος	ίδρυμα+N+Sg+Gen
+
+ψάρι	ψάρι+N+Sg+Voc
+ψάρι	ψάρι+N+Sg+Acc
+ψάρι	ψάρι+N+Sg+Nom
+
+χαμογελου	χαμόγελο+N+Sg+Gen
+
+χωρες	χώρα+N+Plur+Voc
+χωρες	χώρα+N+Plur+Acc
+χωρες	χώρα+N+Plur+Nom
+
+υπαρξης	ύπαρξη+N+Sg+Gen
+
+αγγλικού	αγγλικός+A+Neut+Sg+Gen
+αγγλικού	αγγλικός+A+Masc+Sg+Gen
+
+αρρωστη	άρρωστος+A+Fem+Sg+Voc
+αρρωστη	άρρωστος+A+Fem+Sg+Acc
+αρρωστη	άρρωστος+A+Fem+Sg+Nom
+
+ακριβέστερος	ακριβής+A+Masc+Comp+Sg+Nom
+
+ζηληαρικων	ζηληαρις+A+Neut+Plur+Gen
+
+βαθύτερος	βαθύς+A+Masc+Comp+Sg+Nom
+
+πληρωνε	πληρώνω+V+Imperative+Sg
+πληρωνε	πληρώνω+V+Imperfect+Sg+3P
+
+βελτιωσα	βελτιώνω+V+Aorist+Sg+1P
+
+αισθανθηκες	αισθάνομαι+V+Aorist+Sg+2P
+
+λεχθηκαμε	λεγομαι+V+Aorist+Plur+1P
+
+διαβασα	διαβάζω+V+Aorist+Sg+1P
+
+γραψαμε	γράφω+V+Aorist+Plur+1P

@@ -1,0 +1,441 @@
+!!! el.lexc (Modern Greek) !!!
+!!!   Adriana R. Flórez    !!!
+!!!     EMPTY LEXICON      !!!
+!! -------------------------!!
+
+!! - Supported parts of speech: noun, adjective, verb
+!! - Supported genders: masculine, feminine, neuter
+!! - Supported numbers: singular, plural
+!! - Supported persons: first, second, third
+!! - Supported cases: nominative, genitive, accusative, vocative
+!! - Supported adj. modifiers: comparative, superlative
+!! - Supported verb tenses: present, past aorist, past imperfect, imperative, participle, gerund
+Multichar_Symbols 
++N +A +V 
++Masc +Fem +Neut 
++Sg +Plur 
++1P +2P +3P 
++Nom +Gen +Acc +Voc 
++Comp +Sup 
++Present +Aorist +Imperfect +Imperative +Part +Gerund
+
+!! Root lexicon: noun, adjective, verb
+LEXICON Root 
+        Noun ;
+        Adj ;
+        Verb ;
+
+!! ------------------------------------------------------------
+
+!! Noun lexicon
+!! Divided into sub-lexicons per gender
+!! Each gender divided into sub-lexicons per inflectional class tag (ending)
+LEXICON Noun
+άνθρωπος:ανθρωπ NounMascOs ;
+άντρας:αντρ NounMascAs ;
+αφέντης:αφεντ NounMascIs ; 
+ίδρυμα:ιδρυ NounNeutMa ;
+ψάρι:ψάρι NounNeutI ;
+χαμόγελο:χαμογελ NounNeutO ;
+χώρα:χωρ NounFemA ; 
+ύπαρξη:υπαρξ NounFemI ; 
+
+!! Masculine
+LEXICON NounMascOs
++Ν+Sg+Nom:^ος # ; 
++N+Sg+Gen:^ου # ;
++N+Sg+Acc:^ο # ;
++N+Sg+Voc:^ε # ;
++N+Plur+Nom:^οι # ;
++N+Plur+Gen:^ων # ;
++N+Plur+Acc:^ους # ;
++N+Plur+Voc:^οι # ;
+
+LEXICON NounMascAs
++N+Sg+Nom:^ας # ;
++N+Sg+Gen:^α # ;
++N+Sg+Acc:^α # ;
++N+Sg+Voc:^α # ;
++N+Plur+Nom:^ες # ;
++N+Plur+Gen:^ων # ;
++N+Plur+Acc:^ες # ;
++N+Plur+Voc:^ες # ;
+
+LEXICON NounMascIs
++N+Sg+Nom:^ης # ;
++N+Sg+Gen:^η # ;
++N+Sg+Acc:^η # ;
++N+Sg+Voc:^η # ;
++N+Plur+Nom:^ες # ;
++N+Plur+Gen:^ων # ;
++N+Plur+Acc:^ες # ;
++N+Plur+Voc:^ες # ;
+
+!! Neuter
+LEXICON NounNeutMa
++N+Sg+Nom:^μα # ; 
++N+Sg+Gen:^ματος # ;
++N+Sg+Acc:^μα # ;
++N+Sg+Voc:^μα # ;
++N+Plur+Nom:^ματα # ;
++N+Plur+Gen:^μάτων # ;
++N+Plur+Acc:^ματα # ;
++N+Plur+Voc:^ματα # ;
+
+LEXICON NounNeutI
++N+Sg+Nom:^ι # ; 
++N+Sg+Gen:^ιου # ;
++N+Sg+Acc:^ι # ;
++N+Sg+Voc:^ι # ;
++N+Plur+Nom:^ια # ;
++N+Plur+Gen:^ίων # ;
++N+Plur+Acc:^ια # ;
++N+Plur+Voc:^ια # ;
+
+LEXICON NounNeutO
++N+Sg+Nom:^ο # ; 
++N+Sg+Gen:^ου # ;
++N+Sg+Acc:^ο # ;
++N+Sg+Voc:^ο # ;
++N+Plur+Nom:^α # ;
++N+Plur+Gen:^ων # ;
++N+Plur+Acc:^α # ;
++N+Plur+Voc:^α # ;
+
+!! Feminine
+LEXICON NounFemA
++N+Sg+Nom:^α # ;
++N+Sg+Gen:^ας # ;
++N+Sg+Acc:^α # ;
++N+Sg+Voc:^α # ;
++N+Plur+Nom:^ες # ;
++N+Plur+Gen:^ων # ;
++N+Plur+Acc:^ες # ;
++N+Plur+Voc:^ες # ;
+
+LEXICON NounFemI
++N+Sg+Nom:^η # ; 
++N+Sg+Gen:^ης # ;
++N+Sg+Acc:^η # ;
++N+Sg+Voc:^η # ;
++N+Plur+Nom:^ες # ;
++N+Plur+Gen:^ων # ;
++N+Plur+Acc:^ες # ;
++N+Plur+Voc:^ες # ;
+
+
+
+!! ------------------------------------------------------------
+
+!! Adjective lexicon
+!! Divided into sub-lexicons inflectional class tag (ending)
+!! Each inflectional class tag divided into sub-lexicons per gender
+LEXICON Adj
+αγγλικός:αγγλικ AdjOs1;
+άρρωστος:αρρωστ AdjOs2;
+ακριβής:ακριβ AdjIs1;
+ζηληαρις:ζηληαρ AdjIs2;
+βαθύς:βαθ AdjUs;
+
+LEXICON AdjOs1
++A+Masc: AdjMascOs1 ;
++A+Fem: AdjFemOs1 ;
++A+Neut: AdjNeutOs1 ;
+
+!! Os1 class has 2 possibilities per comparative
+!! (Depending on whether the noun forms it regularly or exceptionally irregular)
+LEXICON AdjMascOs1
++Sg+Nom:^ός # ;
++Sg+Gen:^ού # ;
++Sg+Acc:^ό # ;
++Sg+Voc:^έ # ;
++Plur+Nom:^οί # ;
++Plur+Gen:^ών # ;
++Plur+Acc:^ούς # ;
++Plur+Voc:^οί # ;
++Comp:^ότερος AdjMascOs2 ; !! Canonical form
++Comp:^ύτερος AdjMascOs2 ; !! Irregular
++Sup:^ότατος AdjMascOs2 ;
+
+LEXICON AdjFemOs1
++Sg+Nom:^ή # ;
++Sg+Gen:^ής # ;
++Sg+Acc:^ή # ;
++Sg+Voc:^ή # ;
++Plur+Nom:^ές # ;
++Plur+Gen:^ών # ;
++Plur+Acc:^ές # ;
++Plur+Voc:^ές # ;
++Comp1:^ότερη AdjFemOs2 ; !! Canonical form
++Comp2:^ήτερη AdjFemOs2 ; !! Irregular
++Sup:^ότατη AdjFemOs2 ;
+
+LEXICON AdjNeutOs1
++Sg+Nom:^ό # ;
++Sg+Gen:^ού # ;
++Sg+Acc:^ό # ;
++Sg+Voc:^ό # ;
++Plur+Nom:^ά # ;
++Plur+Gen:^ών # ;
++Plur+Acc:^ά # ;
++Plur+Voc:^ά # ;
++Comp1:^ότερο AdjNeutOs2 ; !! Canonical form
++Comp2:^ύτερο AdjNeutOs2 ; !! Irregular
++Sup:^ότατο AdjNeutOs2 ;
+
+LEXICON AdjOs2
++A+Masc: AdjMascOs2 ;
++A+Fem: AdjFemOs2 ;
++A+Neut: AdjNeutOs2 ;
+
+LEXICON AdjMascOs2
++Sg+Nom:^ος # ;
++Sg+Gen:^ου # ;
++Sg+Acc:^ο # ;
++Sg+Voc:^ε # ;
++Plur+Nom:^οι # ;
++Plur+Gen:^ων # ;
++Plur+Acc:^ους # ;
++Plur+Voc:^οι # ;
++Comp:^ότερος AdjMascOs2 ;
++Sup:^ότατος AdjMascOs2 ;
+
+LEXICON AdjFemOs2
++Sg+Nom:^η # ;
++Sg+Gen:^ης # ;
++Sg+Acc:^η # ;
++Sg+Voc:^η # ;
++Plur+Nom:^ες # ;
++Plur+Gen:^ων # ;
++Plur+Acc:^ες # ;
++Plur+Voc:^ες # ;
++Comp:^ότερη AdjFemOs2 ;
++Sup:^ότατη AdjFemOs2 ;
+
+LEXICON AdjNeutOs2
++Sg+Nom:^ό # ;
++Sg+Gen:^ού # ;
++Sg+Acc:^ό # ;
++Sg+Voc:^ό # ;
++Plur+Nom:^ά # ;
++Plur+Gen:^ών # ;
++Plur+Acc:^ά # ;
++Plur+Voc:^ά # ;
++Comp:^ότερο AdjNeutOs2 ;
++Sup:^ότατο AdjNeutOs2 ;
+
+LEXICON AdjIs1
++A+Masc: AdjMascIs1 ;
++A+Fem: AdjFemIs1 ;
++A+Neut: AdjNeutIs1 ;
+
+LEXICON AdjMascIs1
++Sg+Nom:^ής # ;
++Sg+Gen:^ούς # ;
++Sg+Acc:^ή # ;
++Sg+Voc:^ή # ;
++Plur+Nom:^είς # ;
++Plur+Gen:^ών # ;
++Plur+Acc:^είς # ;
++Plur+Voc:^είς # ;
++Comp:^έστερος AdjMascOs2 ;
++Sup:^έστατος AdjMascOs2 ;
+
+LEXICON AdjFemIs1
++Sg+Nom:^ής # ;
++Sg+Gen:^ούς # ;
++Sg+Acc:^ή # ;
++Sg+Voc:^ή # ;
++Plur+Nom:^είς # ;
++Plur+Gen:^ών # ;
++Plur+Acc:^είς # ;
++Plur+Voc:^είς # ;
++Comp:^έστερη AdjFemOs2 ;
++Sup:^έστατη AdjFemOs2 ;
+
+LEXICON AdjNeutIs1
++Sg+Nom:^ές # ;
++Sg+Gen:^ούς # ;
++Sg+Acc:^ές # ;
++Sg+Voc:^ές # ;
++Plur+Nom:^ή # ;
++Plur+Gen:^ών # ;
++Plur+Acc:^ή # ;
++Plur+Voc:^ή # ;
++Comp:^έστερο AdjNeutOs2 ;
++Sup:^έστατο AdjNeutOs2 ;
+
+LEXICON AdjIs2
++A+Masc: AdjMascIs2 ;
++A+Fem: AdjFemIs2 ;
++A+Neut: AdjNeutIs2 ;
+
+LEXICON AdjMascIs2
++Sg+Nom:^ης # ;
++Sg+Gen:^η # ;
++Sg+Acc:^η # ;
++Sg+Voc:^η # ;
++Plur+Nom:^ηδες # ;
++Plur+Gen:^ηδων # ;
++Plur+Acc:^ηδες # ;
++Plur+Voc:^ηδες # ;
++Comp:^ηστερος AdjMascOs2 ;
++Sup:^ηστατος AdjMascOs2 ;
+
+LEXICON AdjFemIs2
++Sg+Nom:^α # ;
++Sg+Gen:^ας # ;
++Sg+Acc:^α # ;
++Sg+Voc:^α # ;
++Plur+Nom:^ες # ;
++Plur+Gen:^ων # ;
++Plur+Acc:^ες # ;
++Plur+Voc:^ες # ;
++Comp:^ηστερη AdjFemOs2 ;
++Sup:^ηστατη AdjFemOs2 ;
+
+LEXICON AdjNeutIs2
++Sg+Nom:^ικο # ;
++Sg+Gen:^ικου # ;
++Sg+Acc:^ικο # ;
++Sg+Voc:^ικο # ;
++Plur+Nom:^ικα # ;
++Plur+Gen:^ικων # ;
++Plur+Acc:^ικα # ;
++Plur+Voc:^ικα # ;
++Comp:^ηστερο AdjNeutOs2 ;
++Sup:^ηστατο AdjNeutOs2 ;
+
+LEXICON AdjUs
++A+Masc: AdjMascUs ;
++A+Fem: AdjFemUs ;
++A+Neut: AdjNeutUs ;
+
+LEXICON AdjMascUs
++Sg+Nom:^ύς # ;
++Sg+Gen:^ιού # ;
++Sg+Acc:^ύ # ;
++Sg+Voc:^ύ # ;
++Plur+Nom:^ιοί # ;
++Plur+Gen:^ιών # ;
++Plur+Acc:^ιούς # ;
++Plur+Voc:^ιοί # ;
++Comp:^ύτερος AdjMascOs2 ;
++Sup:^ύτατος AdjMascOs2 ;
+
+LEXICON AdjFemUs
++Sg+Nom:^ιά # ;
++Sg+Gen:^ιάς # ;
++Sg+Acc:^ιά # ;
++Sg+Voc:^ιά # ;
++Plur+Nom:^ιές # ;
++Plur+Gen:^ιών # ;
++Plur+Acc:^ιές # ;
++Plur+Voc:^ιές # ;
++Comp:^ύτερη AdjFemOs2 ;
++Sup:^ύτατη AdjFemOs2 ;
+
+LEXICON AdjNeutUs
++Sg+Nom:^ύ # ;
++Sg+Gen:^ιού # ;
++Sg+Acc:^ύ # ;
++Sg+Voc:^ύ # ;
++Plur+Nom:^ιά # ;
++Plur+Gen:^ιών # ;
++Plur+Acc:^ιά # ;
++Plur+Voc:^ιά # ;
++Comp:^ύτερο AdjNeutOs2 ;
++Sup:^ύτατο AdjFemOs2 ;
+
+
+!! ------------------------------------------------------------
+!! VERBS
+
+!! Verb lexicon supports Α-conjugation, subgroup within A:
+!! - Ending in νω in active
+!! - Ending in ομαι in passive
+LEXICON Verb
+πληρώνω:πληρων VerbA ; !! 3 syllables
+βελτιώνω:βελτιων VerbA ;
+διαβάζω:διαβαζ VerbA ; !! 2 syllables
+γράφω:γραφ VerbA ;
+αισθάνομαι:αισθαν VerbPath1 ; !! passive with θ
+λεγομαι:λεγ VerbPath1 ;          
+αναλογίζομαι:αναλογιζ VerbPath2 ; !! pasive with τ
+συνεργάζομαι:συνεργα VerbPath2 ;
+
+!! Alpha conjugation (ending in -νω, past aor. in -σα)
+LEXICON VerbA
++V+Infinitive:^ω # ;           
++V+Present+Sg+1P:^ω # ;           
++V+Present+Sg+2P:^εις # ;
++V+Present+Sg+3P:^ει # ;
++V+Present+Plur+1P:^ουμε # ;
++V+Present+Plur+2P:^ετε # ;
++V+Present+Plur+3P:^ουν # ;
++V+Aorist+Sg+1P:^^α # ;       
++V+Aorist+Sg+2P:^^ες # ;      
++V+Aorist+Sg+3P:^^ε # ;       
++V+Aorist+Plur+1P:^^αμε # ;    
++V+Aorist+Plur+2P:^^ατε # ;   
++V+Aorist+Plur+3P:^^αν # ;     
++V+Imperfect+Sg+1P:^α # ;
++V+Imperfect+Sg+2P:^ες # ; 
++V+Imperfect+Sg+3P:^ε # ;
++V+Imperfect+Plur+1P:^αμε # ;
++V+Imperfect+Plur+2P:^ατε # ;
++V+Imperfect+Plur+3P:^αν # ;
++V+Imperative+Sg:^ε # ;         
++V+Imperative+Plur:^τε # ;
++V+Gerund:^οντας # ;
++V+Part:^ει #;
+
+!! Passive conjugation (past aor. in -θηκα)
+LEXICON VerbPath1
++V+Infinitive:^ομαι
++V+Present+Sg+1P:^ομαι # ;
++V+Present+Sg+2P:^ασαι # ;
++V+Present+Sg+3P:^αται # ;
++V+Present+Plur+1P:^αμαστε # ;
++V+Present+Plur+2P:^αστε # ;
++V+Present+Plur+3P:^ωνται # ;
++V+Aorist+Sg+1P:^θηκα # ;
++V+Aorist+Sg+2P:^θηκες # ;
++V+Aorist+Sg+3P:^θηκε # ;
++V+Aorist+Plur+1P:^θηκαμε # ;
++V+Aorist+Plur+2P:^θηκατε # ;
++V+Aorist+Plur+3P:^θηκαν # ;
++V+Imperfect+Sg+1P:^όμουν # ;
++V+Imperfect+Sg+2P:^όσουν # ;
++V+Imperfect+Sg+3P:^όταν # ;
++V+Imperfect+Plur+1P:^όμασταν # ;
++V+Imperfect+Plur+2P:^όσασταν # ;
++V+Imperfect+Plur+3P:^όνταν # ;
++V+Imperative+Sg:^σου # ;
++V+Imperative+Plur:^αστείτε # ;
++V+Part:^ηθεί # ;
+
+!! Passive conjugation (στηκα)
+LEXICON VerbPath2
++V+Infinitive:^ομαι # ;
++V+Present+Sg+1P:^ομαι # ;
++V+Present+Sg+2P:^εσαι # ;
++V+Present+Sg+3P:^εται # ;
++V+Present+Plur+1P:^ομαστε # ;
++V+Present+Plur+2P:^εστε # ;
++V+Present+Plur+3P:^ονται # ;
++V+Aorist+Sg+1P:^στηκα # ;
++V+Aorist+Sg+2P:^στηκες # ;
++V+Aorist+Sg+3P:^στηκε # ;
++V+Aorist+Plur+1P:^στηκαμε # ;
++V+Aorist+Plur+2P:^στηκατε # ;
++V+Aorist+Plur+3P:^στήκαν # ;
++V+Imperfect+Sg+1P:^όμουν # ;
++V+Imperfect+Sg+2P:^όσουν # ;
++V+Imperfect+Sg+3P:^όταν # ;
++V+Imperfect+Plur+1P:^όμαστε # ;
++V+Imperfect+Plur+2P:^όσαστε # ;
++V+Imperfect+Plur+3P:^ονταν # ;
++V+Imperative+Sg:^σου # ;
++V+Imperative+Plur:^στείτε # ;
++V+Part:^στεί # ;
